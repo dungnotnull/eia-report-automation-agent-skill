@@ -33,12 +33,12 @@ Small and medium projects often need an EIA but lack the budget or in-house expe
 
 ## Core Design Principles
 
-1. **Framework-grounded scoring** ? every dimension is scored against a named, citable framework; no ad-hoc rubrics.
-2. **Evidence-first** ? every material claim cites a source or prior step; prefer the highest evidence tier available.
-3. **Research-first** ? use live search, WebFetch, and a self-updating knowledge brain before falling back to internal knowledge.
-4. **Safety/compliance gate** ? no binding approval; a mandatory disclaimer is attached to every deliverable.
-5. **Graceful degradation** ? works offline with cached knowledge, clearly stating limitations.
-6. **Composable sub-skills** ? each stage is a reusable skill that sibling `legal-compliance` skills can invoke.
+1. **Framework-grounded scoring**  every dimension is scored against a named, citable framework; no ad-hoc rubrics.
+2. **Evidence-first**  every material claim cites a source or prior step; prefer the highest evidence tier available.
+3. **Research-first**  use live search, WebFetch, and a self-updating knowledge brain before falling back to internal knowledge.
+4. **Safety/compliance gate**  no binding approval; a mandatory disclaimer is attached to every deliverable.
+5. **Graceful degradation**  works offline with cached knowledge, clearly stating limitations.
+6. **Composable sub-skills**  each stage is a reusable skill that sibling `legal-compliance` skills can invoke.
 
 ---
 
@@ -61,33 +61,33 @@ Small and medium projects often need an EIA but lack the budget or in-house expe
 
 ```
 eia-report-automation/
-??? CLAUDE.md                              # Agent skill entry card
-??? PROJECT-detail.md                      # Full technical specification
-??? PROJECT-DEVELOPMENT-PHASE-TRACKING.md  # Phase roadmap (all phases 100% done)
-??? SECOND-KNOWLEDGE-BRAIN.md              # Self-improving knowledge base
-??? CROSS-SKILL-WIRING.md                  # Reuse guide for sibling skills
-??? README.md                              # This file
-??? skills/
-?   ??? main.md                            # Harness entry point
-?   ??? sub-requirements-gatherer.md       # Intake & project profile
-?   ??? sub-risk-screener.md               # Leopold/RIAM impact scoring
-?   ??? sub-compliance-check.md            # Regulatory checklist & disclaimer
-?   ??? sub-standards-updater.md           # Standards & biodiversity refresh
-?   ??? sub-improvement-roadmap.md         # Mitigation & monitoring plan
-??? schema/
-?   ??? shared-eia-schema.json             # Canonical input/output JSON schema
-??? tests/
-?   ??? test-scenarios.md                  # 6 scenario descriptions
-?   ??? test_runner.py                     # Regression test runner
-?   ??? fixtures/
-?       ??? scenario_1.json                # Small factory EIA
-?       ??? scenario_2.json                # Project near protected area
-?       ??? scenario_3.json                # Wastewater discharge
-?       ??? scenario_4.json                # User asks to approve
-?       ??? scenario_5.json                # Regulation update
-?       ??? scenario_6.json                # Quarry + monitoring plan
-??? tools/
-    ??? knowledge_updater.py               # Self-updating knowledge pipeline
+ CLAUDE.md                              # Agent skill entry card
+ PROJECT-detail.md                      # Full technical specification
+ PROJECT-DEVELOPMENT-PHASE-TRACKING.md  # Phase roadmap (all phases 100% done)
+ SECOND-KNOWLEDGE-BRAIN.md              # Self-improving knowledge base
+ CROSS-SKILL-WIRING.md                  # Reuse guide for sibling skills
+ README.md                              # This file
+ skills/
+    main.md                            # Harness entry point
+    sub-requirements-gatherer.md       # Intake & project profile
+    sub-risk-screener.md               # Leopold/RIAM impact scoring
+    sub-compliance-check.md            # Regulatory checklist & disclaimer
+    sub-standards-updater.md           # Standards & biodiversity refresh
+    sub-improvement-roadmap.md         # Mitigation & monitoring plan
+ schema/
+    shared-eia-schema.json             # Canonical input/output JSON schema
+ tests/
+    test-scenarios.md                  # 6 scenario descriptions
+    test_runner.py                     # Regression test runner
+    fixtures/
+      scenario_1.json                # Small factory EIA
+      scenario_2.json                # Project near protected area
+      scenario_3.json                # Wastewater discharge
+      scenario_4.json                # User asks to approve
+      scenario_5.json                # Regulation update
+      scenario_6.json                # Quarry + monitoring plan
+  tools/
+  knowledge_updater.py               # Self-updating knowledge pipeline
 ```
 
 ---
@@ -173,11 +173,11 @@ Supported sectors: manufacturing, hydropower, solar, wind, thermal_power, mining
 
 The harness will block or downgrade the final output if any mandatory gate is not satisfied:
 
-- **COMPLIANCE GATE** ? disclaimer + licensed-professional recommendation required; blocks binding approval language.
-- **EVIDENCE GATE** ? every score, limit, or receptor claim must cite a source or prior step.
-- **FRAMEWORK GATE** ? every dimension must be scored against a named framework.
-- **CHALLENGE GATE** ? a devil's-advocate pass documents weakest evidence, most generous assumption, and largest residual risk.
-- **OUTPUT GATE** ? final artifact must contain all seven required sections with non-empty critical fields.
+- **COMPLIANCE GATE**  disclaimer + licensed-professional recommendation required; blocks binding approval language.
+- **EVIDENCE GATE**  every score, limit, or receptor claim must cite a source or prior step.
+- **FRAMEWORK GATE**  every dimension must be scored against a named framework.
+- **CHALLENGE GATE**  a devil's-advocate pass documents weakest evidence, most generous assumption, and largest residual risk.
+- **OUTPUT GATE**  final artifact must contain all seven required sections with non-empty critical fields.
 
 ---
 
@@ -187,7 +187,7 @@ The harness will block or downgrade the final output if any mandatory gate is no
 
 - Fetches recent ArXiv papers (`physics.geo-ph`, `q-bio.PE`).
 - Optionally calls a WebSearch endpoint or crawl4ai on authoritative domains (`iaia.org`, `ifc.org`, `iucnredlist.org`, `protectedplanet.net`).
-- Scores entries by **recency ? relevance ? source tier**.
+- Scores entries by **recency  relevance  source tier**.
 - Deduplicates by URL/DOI hash.
 - Appends date-stamped rows to `SECOND-KNOWLEDGE-BRAIN.md`.
 - Supports `--dry-run`, `--since YYYY-MM-DD`, `--max-results`, and structured JSONL logging.
@@ -227,12 +227,12 @@ The runner validates:
 
 ## Test Scenarios Covered
 
-1. **Small factory EIA** ? garment factory in Vietnam.
-2. **Project near protected area** ? solar farm near a Ramsar wetland.
-3. **Wastewater discharge exceedance** ? food-processing plant in Thailand.
-4. **User asks to approve** ? compliance gate blocks binding approval.
-5. **Regulation update** ? standards updater flags stale permits.
-6. **Impact matrix + monitoring plan** ? quarry expansion in Indonesia.
+1. **Small factory EIA**  garment factory in Vietnam.
+2. **Project near protected area**  solar farm near a Ramsar wetland.
+3. **Wastewater discharge exceedance**  food-processing plant in Thailand.
+4. **User asks to approve**  compliance gate blocks binding approval.
+5. **Regulation update**  standards updater flags stale permits.
+6. **Impact matrix + monitoring plan**  quarry expansion in Indonesia.
 
 ---
 
@@ -261,12 +261,12 @@ See `CROSS-SKILL-WIRING.md` for integration patterns and anti-patterns.
 
 All development phases are 100% complete:
 
-- [x] Phase 0 ? Research & Skill Architecture
-- [x] Phase 1 ? Core Sub-Skills
-- [x] Phase 2 ? Main Harness + Quality Gates
-- [x] Phase 3 ? SECOND-KNOWLEDGE-BRAIN Pipeline
-- [x] Phase 4 ? Testing & Validation
-- [x] Phase 5 ? Integration & Cross-Skill Wiring
+- [x] Phase 0  Research & Skill Architecture
+- [x] Phase 1  Core Sub-Skills
+- [x] Phase 2  Main Harness + Quality Gates
+- [x] Phase 3  SECOND-KNOWLEDGE-BRAIN Pipeline
+- [x] Phase 4  Testing & Validation
+- [x] Phase 5  Integration & Cross-Skill Wiring
 
 The repository is production-ready and open-source-ready.
 
@@ -274,7 +274,7 @@ The repository is production-ready and open-source-ready.
 
 ## License
 
-MIT License ? see [LICENSE](LICENSE) for details.
+MIT License: see [LICENSE](LICENSE) for details.
 
 ---
 
