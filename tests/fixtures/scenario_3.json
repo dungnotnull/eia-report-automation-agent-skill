@@ -1,0 +1,29 @@
+
+{
+  "scenario": 3,
+  "title": "Wastewater discharge exceedance",
+  "input": {
+    "project_name": "Thai Food Processing",
+    "location": {"country": "TH"},
+    "sector": "manufacturing",
+    "scale": "medium",
+    "activities": ["washing", "blanching", "effluent discharge"],
+    "jurisdiction": "Thailand",
+    "sensitive_receptors": ["river"],
+    "goal": "check compliance"
+  },
+  "expected_output": {
+    "executive_summary": {"verdict": "conditional - treatment required", "headline_score": "C overall"},
+    "inputs_and_assumptions": {"provided": {}, "assumed": [], "missing": []},
+    "multi_dimensional_score": [
+      {"dimension": "water", "score": "B", "framework": "RIAM", "evidence": ["Thailand effluent standard"], "confidence": "medium"}
+    ],
+    "findings": {"strengths": [], "risks": ["BOD exceedance"], "gaps": ["effluent flow rate"]},
+    "improvement_roadmap": [
+      {"action": "Install biological treatment", "tier": "minimize", "effort": "medium", "impact": "high", "priority_rank": 1, "timeline": "pre-operation", "evidence": ["Thailand standard"]}
+    ],
+    "sources_and_limitations": {"sources": ["Thailand PCO notification", "IFC PS3"], "limitations": []},
+    "disclaimer": "Screening only; licensed professional review required."
+  },
+  "checks": {"requires_disclaimer": true, "approval_blocked": false}
+}

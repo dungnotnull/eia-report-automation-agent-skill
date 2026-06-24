@@ -1,0 +1,30 @@
+
+{
+  "scenario": 6,
+  "title": "Impact matrix + operations monitoring plan",
+  "input": {
+    "project_name": "Java Quarry Expansion",
+    "location": {"country": "ID"},
+    "sector": "quarry",
+    "scale": "large",
+    "activities": ["blasting", "crushing", "hauling", "rehabilitation"],
+    "jurisdiction": "Indonesia",
+    "sensitive_receptors": ["forest edge community"],
+    "goal": "operations monitoring plan"
+  },
+  "expected_output": {
+    "executive_summary": {"verdict": "significant impacts - monitoring required", "headline_score": "B overall"},
+    "inputs_and_assumptions": {"provided": {}, "assumed": [], "missing": []},
+    "multi_dimensional_score": [
+      {"dimension": "air", "score": "B", "framework": "RIAM", "evidence": ["dust from crushing"], "confidence": "medium"},
+      {"dimension": "biodiversity", "score": "B", "framework": "RIAM", "evidence": ["forest edge"], "confidence": "medium"}
+    ],
+    "findings": {"strengths": ["rehabilitation planned"], "risks": ["dust", "noise", "habitat"], "gaps": ["baseline PM10"]},
+    "improvement_roadmap": [
+      {"action": "Dust suppression at crusher", "tier": "minimize", "effort": "medium", "impact": "high", "priority_rank": 1, "timeline": "operations", "evidence": ["RIAM"]}
+    ],
+    "sources_and_limitations": {"sources": ["Indonesia EIA regulation", "IFC PS"], "limitations": []},
+    "disclaimer": "Screening only; licensed professional review required."
+  },
+  "checks": {"requires_disclaimer": true, "approval_blocked": false}
+}

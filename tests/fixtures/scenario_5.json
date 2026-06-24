@@ -1,0 +1,30 @@
+
+{
+  "scenario": 5,
+  "title": "Regulation update changes discharge limit",
+  "input": {
+    "project_name": "Thai Food Processing",
+    "location": {"country": "TH"},
+    "sector": "manufacturing",
+    "scale": "medium",
+    "activities": ["washing", "blanching", "effluent discharge"],
+    "jurisdiction": "Thailand",
+    "sensitive_receptors": ["river"],
+    "baseline_data": "old permit 2019",
+    "goal": "check compliance"
+  },
+  "expected_output": {
+    "executive_summary": {"verdict": "conditional - refresh standards", "headline_score": "C overall"},
+    "inputs_and_assumptions": {"provided": {"baseline_data": "old permit 2019"}, "assumed": [], "missing": []},
+    "multi_dimensional_score": [
+      {"dimension": "water", "score": "B", "framework": "RIAM", "evidence": ["Thailand effluent standard"], "confidence": "medium"}
+    ],
+    "findings": {"strengths": [], "risks": ["standard may have been tightened"], "gaps": ["current limit value"]},
+    "improvement_roadmap": [
+      {"action": "Refresh standards and compare loads", "tier": "minimize", "effort": "low", "impact": "high", "priority_rank": 1, "timeline": "1 week", "evidence": ["sub-standards-updater"]}
+    ],
+    "sources_and_limitations": {"sources": [], "limitations": ["brain refresh needed"]},
+    "disclaimer": "Screening only; licensed professional review required."
+  },
+  "checks": {"requires_disclaimer": true, "approval_blocked": false}
+}

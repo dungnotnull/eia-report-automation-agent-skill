@@ -1,0 +1,30 @@
+
+{
+  "scenario": 1,
+  "title": "Small factory EIA",
+  "input": {
+    "project_name": "ABC Garment Factory",
+    "location": {"country": "VN", "region": "Binh Duong"},
+    "sector": "manufacturing",
+    "scale": "small",
+    "activities": ["cutting", "sewing", "washing", "boiler operation"],
+    "jurisdiction": "Vietnam",
+    "sensitive_receptors": [],
+    "goal": "draft EIA"
+  },
+  "expected_output": {
+    "executive_summary": {"verdict": "screening recommendation", "headline_score": "C overall"},
+    "inputs_and_assumptions": {"provided": {}, "assumed": [], "missing": []},
+    "multi_dimensional_score": [
+      {"dimension": "water", "score": "C", "framework": "RIAM", "evidence": ["Vietnam effluent standard"], "confidence": "medium"},
+      {"dimension": "air", "score": "D", "framework": "RIAM", "evidence": ["boiler emissions screening"], "confidence": "medium"}
+    ],
+    "findings": {"strengths": [], "risks": ["effluent load"], "gaps": ["baseline water quality"]},
+    "improvement_roadmap": [
+      {"action": "Install effluent treatment", "tier": "minimize", "effort": "medium", "impact": "medium", "priority_rank": 1, "timeline": "pre-operation", "evidence": ["Vietnam standard"]}
+    ],
+    "sources_and_limitations": {"sources": ["Vietnam EIA law", "IFC PS"], "limitations": []},
+    "disclaimer": "This deliverable is for screening only and does not constitute legal advice. A licensed environmental professional must review."
+  },
+  "checks": {"requires_disclaimer": true, "approval_blocked": false}
+}

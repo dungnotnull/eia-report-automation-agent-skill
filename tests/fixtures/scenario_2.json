@@ -1,0 +1,29 @@
+
+{
+  "scenario": 2,
+  "title": "Project near protected area",
+  "input": {
+    "project_name": "Laguna Solar Farm",
+    "location": {"country": "PH", "coordinates": {"lat": 14.3, "lon": 121.0}},
+    "sector": "solar",
+    "scale": "medium",
+    "activities": ["panel installation", "cable trenching", "access roads"],
+    "jurisdiction": "Philippines",
+    "sensitive_receptors": ["Ramsar wetland"],
+    "goal": "screen impacts"
+  },
+  "expected_output": {
+    "executive_summary": {"verdict": "significant impacts require mitigation", "headline_score": "B overall"},
+    "inputs_and_assumptions": {"provided": {}, "assumed": [], "missing": []},
+    "multi_dimensional_score": [
+      {"dimension": "biodiversity", "score": "B", "framework": "RIAM", "evidence": ["Ramsar wetland 500 m"], "confidence": "medium"}
+    ],
+    "findings": {"strengths": ["renewable energy"], "risks": ["wetland disturbance"], "gaps": ["avian survey"]},
+    "improvement_roadmap": [
+      {"action": "Setback buffer from wetland", "tier": "avoid", "effort": "low", "impact": "high", "priority_rank": 1, "timeline": "design phase", "evidence": ["mitigation hierarchy"]}
+    ],
+    "sources_and_limitations": {"sources": ["Protected Planet", "IAIA"], "limitations": []},
+    "disclaimer": "Screening only; licensed professional review required."
+  },
+  "checks": {"requires_disclaimer": true, "approval_blocked": false}
+}
